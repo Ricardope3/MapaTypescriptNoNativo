@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      AAAAAAAAAA
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding> 
+    <button ion-button (click)="startTracking()" *ngIf="!isTracking">
+        <ion-icon name="locate"></ion-icon>
+        Start
+    </button>
+
+  <button ion-button (click)="stopTracking()" *ngIf="!isTracking">
+    <ion-icon name="locate"></ion-icon>
+    Stop
+  </button>
+
+  <div #map id="map" style="width:100%;height:100%;"></div>
+
+</ion-content>
